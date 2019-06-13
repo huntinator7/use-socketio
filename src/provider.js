@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Context } from "./context";
 const io = require("socket.io-client");
+const middle = require("socketio-wildcard");
+io.use(middle);
 
 export default class Provider extends Component {
   constructor(props) {
